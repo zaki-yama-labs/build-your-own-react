@@ -1,4 +1,4 @@
-export function createElement(
+function createElement(
   type: string,
   props?: object | null,
   ...children: any[]
@@ -23,3 +23,8 @@ function createTextElement(text: string | number) {
     }
   };
 }
+
+const Didact = {
+  createElement
+};
+export default Didact;

@@ -1,13 +1,13 @@
-import { createElement } from "../react";
+import Didact from "../didact";
 
-describe("react", () => {
+describe("didact", () => {
   describe("createElement", () => {
     it("with type only", () => {
       const expected = {
         type: "div",
         props: { children: [] }
       };
-      expect(createElement("div")).toStrictEqual(expected);
+      expect(Didact.createElement("div")).toStrictEqual(expected);
     });
 
     it("type and one child", () => {
@@ -16,7 +16,7 @@ describe("react", () => {
         type: "div",
         props: { children: [a] }
       };
-      expect(createElement("div", null, a)).toStrictEqual(expected);
+      expect(Didact.createElement("div", null, a)).toStrictEqual(expected);
     });
 
     it("type and children", () => {
@@ -26,7 +26,7 @@ describe("react", () => {
         type: "div",
         props: { children: [a, b] }
       };
-      expect(createElement("div", null, a, b)).toStrictEqual(expected);
+      expect(Didact.createElement("div", null, a, b)).toStrictEqual(expected);
     });
   });
 });
